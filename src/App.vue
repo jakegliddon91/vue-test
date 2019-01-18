@@ -1,6 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+      <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+            Jake Gliddon
+            </div>
+        </div>
+
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+            
+            <router-link to="/" class="navbar-item">
+              Home
+            </router-link>
+
+            <router-link to="/faq" class="navbar-item">
+              About
+            </router-link>
+
+            <router-link to="/" class="navbar-item">
+              Portfolio
+            </router-link>
+
+            <router-link to="/" class="navbar-item">
+              Contact
+            </router-link>            
+          </div>
+        </div>
+      </nav>
     <router-view/>
   </div>
 </template>
@@ -11,13 +44,18 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+@import '../node_modules/bulma/bulma.sass'
+@import 'mq'
+.navbar
+  background-color: red
+  .navbar-brand
+    .navbar-item
+      color: yellow
+    font-weight: bold
+  .navbar-menu
+    .navbar-item
+      padding-right: 40px
+      color: yellow
+
 </style>
