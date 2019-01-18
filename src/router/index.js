@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Faq from '@/components/Faq'
+import Portfolio from '@/components/Portfolio'
+import About from '@/components/About'
+import Contact from '@/components/Contact'
 
 Vue.use(Router)
 
@@ -13,9 +15,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/faq',
-      name: 'Faq',
-      component: Faq
+      path: '/portfolio',
+      name: 'Portfolio',
+      component: Portfolio
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
     }
   ]
 })
